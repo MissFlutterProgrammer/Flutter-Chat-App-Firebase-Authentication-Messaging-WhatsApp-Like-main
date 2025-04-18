@@ -9,7 +9,9 @@ class NewGroupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(context.tr('newGroup')),
+        title: Text(
+          context.tr('newGroup'),
+        ),
       ),
       body: Center(
         child: Lottie.asset('assets/lottie/soon.json'),

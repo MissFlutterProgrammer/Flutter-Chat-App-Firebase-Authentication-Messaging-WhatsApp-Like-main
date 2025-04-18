@@ -1,8 +1,6 @@
 import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-
 import '../core/networking/dio_factory.dart';
 import '../helpers/access_token.dart';
 

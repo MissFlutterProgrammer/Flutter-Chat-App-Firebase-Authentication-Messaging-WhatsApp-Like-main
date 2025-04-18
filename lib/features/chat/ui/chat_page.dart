@@ -14,7 +14,6 @@ import 'package:gap/gap.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../../core/networking/dio_factory.dart';
 import '../../../helpers/extensions.dart';
 import '../../../helpers/notifications.dart';
@@ -104,12 +103,15 @@ class _ChatScreenState extends State<ChatScreen> {
     if (pickedFile != null) {
       if (!mounted) return;
 
-      context.pushNamed(Routes.displayPictureScreen, arguments: [
-        pickedFile,
-        token!,
-        widget.receivedMToken,
-        widget.receivedUserID,
-      ]);
+      context.pushNamed(
+        Routes.displayPictureScreen,
+        arguments: [
+          pickedFile,
+          token!,
+          widget.receivedMToken,
+          widget.receivedUserID,
+        ],
+      );
     }
   }
 

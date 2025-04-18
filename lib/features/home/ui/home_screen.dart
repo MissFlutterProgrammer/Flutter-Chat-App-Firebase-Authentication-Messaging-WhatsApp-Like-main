@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -5,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../../../helpers/extensions.dart';
 import '../../../router/routes.dart';
 import '../../../services/database.dart';
@@ -38,7 +39,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
         ),
         appBar: AppBar(
-          title: Text(context.tr('title')),
+          title: Text(
+            context.tr('title'),
+          ),
           bottom: TabBar(
             indicatorColor: ColorsManager.greenPrimary,
             indicatorWeight: 3.5,
@@ -62,12 +65,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
                 if (pickedFile != null) {
                   if (!context.mounted) return;
-                  context.pushNamed(Routes.displayPictureScreen, arguments: [
-                    pickedFile,
-                    '',
-                    '',
-                    '',
-                  ]);
+                  context.pushNamed(
+                    Routes.displayPictureScreen,
+                    arguments: [pickedFile, '', '', ''],
+                  );
                 }
               },
             ),
@@ -101,10 +102,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       case AppLifecycleState.detached:
       case AppLifecycleState.hidden:
       case AppLifecycleState.paused:
-        await DatabaseMethods.updateUserDetails({'isOnline': 'false'});
-
-        break;
-      default:
         await DatabaseMethods.updateUserDetails({'isOnline': 'false'});
 
         break;

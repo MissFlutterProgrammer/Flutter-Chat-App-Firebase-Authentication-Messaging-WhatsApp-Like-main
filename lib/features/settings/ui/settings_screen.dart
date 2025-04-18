@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../../../core/widgets/modal_fit.dart';
 import '../../../themes/styles.dart';
 
@@ -30,7 +29,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(context.tr('settings')),
+        title: Text(
+          context.tr('settings'),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),

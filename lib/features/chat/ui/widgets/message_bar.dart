@@ -2,15 +2,17 @@ import 'package:chat_bubbles/message_bars/message_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../themes/colors.dart';
 import '../../../../themes/styles.dart';
 
 class CustomMessageBar extends StatelessWidget {
   final Function(String) onSend;
   final VoidCallback onShowOptions;
-  const CustomMessageBar(
-      {super.key, required this.onSend, required this.onShowOptions});
+  const CustomMessageBar({
+    super.key,
+    required this.onSend,
+    required this.onShowOptions,
+  });
 
   @override
   Widget build(BuildContext context) {

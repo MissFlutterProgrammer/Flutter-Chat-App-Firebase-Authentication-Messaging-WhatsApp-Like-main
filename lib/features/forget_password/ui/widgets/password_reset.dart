@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-
 import '../../../../../helpers/app_regex.dart';
 import '../../../../../themes/styles.dart';
 import '../../../../core/widgets/app_button.dart';

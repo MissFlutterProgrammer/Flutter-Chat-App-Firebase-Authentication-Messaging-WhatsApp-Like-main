@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-
 import '../../../core/widgets/already_have_account_text.dart';
 import '../../../core/widgets/no_internet.dart';
 import '../../../core/widgets/terms_and_conditions_text.dart';

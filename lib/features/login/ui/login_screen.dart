@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-
 import '../../../core/widgets/login_and_signup_form.dart';
 import '../../../core/widgets/modal_fit.dart';
 import '../../../core/widgets/no_internet.dart';

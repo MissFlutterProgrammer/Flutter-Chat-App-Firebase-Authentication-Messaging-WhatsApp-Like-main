@@ -16,14 +16,14 @@ dependencies:
     sdk: flutter
   flutter_chat_types: ^3.6.2
   flutter_linkify: ^6.0.0
-  html: ^0.15.4
+  html: ^0.15.5+1
   http: '>=0.13.6 <2.0.0'
   linkify: ^5.0.0
   meta: '>=1.8.0 <2.0.0'
-  url_launcher: ^6.1.12
+  url_launcher: ^6.3.1
 
 dev_dependencies:
-  dart_code_metrics: ^5.7.5
-  flutter_lints: ^2.0.2
+  dart_code_metrics: ^5.7.6
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter

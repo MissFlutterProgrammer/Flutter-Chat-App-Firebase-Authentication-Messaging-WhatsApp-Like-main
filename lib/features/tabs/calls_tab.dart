@@ -6,6 +6,8 @@ class CallsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Lottie.asset('assets/lottie/soon.json'));
+    return Center(
+      child: Lottie.asset('assets/lottie/soon.json'),
+    );
   }
 }

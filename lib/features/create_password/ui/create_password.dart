@@ -7,7 +7,6 @@ import 'package:flutter_offline/flutter_offline.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
 import '../../../core/widgets/login_and_signup_form.dart';
 import '../../../core/widgets/no_internet.dart';
 import '../../../core/widgets/terms_and_conditions_text.dart';
@@ -79,7 +78,9 @@ class CreatePassword extends StatelessWidget {
               !connectivity.contains(ConnectivityResult.none);
           return connected
               ? BuildCreatePasswordScreen(
-                  googleUser: googleUser, credential: credential)
+                  googleUser: googleUser,
+                  credential: credential,
+                )
               : const BuildNoInternet();
         },
         child: const Center(

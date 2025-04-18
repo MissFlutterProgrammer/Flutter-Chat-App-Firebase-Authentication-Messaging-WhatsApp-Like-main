@@ -152,7 +152,7 @@ class _LinkPreviewState extends State<LinkPreview>
         child: child,
       );
 
-  Widget _bodyWidget(PreviewData data, double width) {
+  Widget _bodyWidget(PreviewData data) {
     final padding = widget.padding ??
         const EdgeInsets.only(
           bottom: 16,
@@ -187,7 +187,6 @@ class _LinkPreviewState extends State<LinkPreview>
       ],
     );
   }
-
 
   Widget _containerWidget({
     required bool animate,
@@ -439,13 +438,13 @@ class _LinkPreviewState extends State<LinkPreview>
             : widget.previewData!.image!.width /
                 widget.previewData!.image!.height;
 
-        final width = aspectRatio == 1 ? widget.width : widget.width - 32;
+        // Final width = aspectRatio == 1 ? widget.width : widget.width - 32;.
 
         return _containerWidget(
           animate: shouldAnimate,
           child: aspectRatio == 1
               ? _minimizedBodyWidget(previewData)
-              : _bodyWidget(previewData, width),
+              : _bodyWidget(previewData),
           withPadding: aspectRatio == 1,
         );
       }

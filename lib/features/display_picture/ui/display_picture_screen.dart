@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:chatchat/helpers/extensions.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -8,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:image_picker/image_picker.dart';
-
 import '../../../services/database.dart';
 import '../../../services/notification_service.dart';
 import '../../../themes/colors.dart';
@@ -49,19 +47,26 @@ class _DisplayPictureScreenState extends State<DisplayPictureScreen> {
           : FloatingActionButtonLocation.endFloat,
       floatingActionButton: SpeedDial(
         animatedIcon: AnimatedIcons.menu_close,
-        animatedIconTheme: IconThemeData(size: 22.0.sp, color: Colors.white),
+        animatedIconTheme: IconThemeData(
+          size: 22.sp,
+          color: Colors.white,
+        ),
         backgroundColor: ColorsManager.greenPrimary,
         visible: true,
         curve: Curves.bounceIn,
         children: [
           SpeedDialChild(
-            child: const Icon(Icons.save_alt_rounded, color: Colors.white),
+            child: const Icon(
+              Icons.save_alt_rounded,
+              color: Colors.white,
+            ),
             backgroundColor: ColorsManager.greenPrimary,
             onTap: () async {
               _showLoadingDialog();
               final String filename = widget.image.name;
-              await widget.image
-                  .saveTo('/storage/emulated/0/DCIM/Camera/$filename');
+              await widget.image.saveTo(
+                '/storage/emulated/0/DCIM/Camera/$filename',
+              );
               if (!context.mounted) return;
               context.pop();
               ScaffoldMessenger.of(context).showSnackBar(
@@ -74,7 +79,7 @@ class _DisplayPictureScreenState extends State<DisplayPictureScreen> {
             labelStyle: TextStyle(
               fontWeight: FontWeight.w500,
               color: Colors.white,
-              fontSize: 16.0.sp,
+              fontSize: 16.sp,
             ),
             labelBackgroundColor: const Color(0xff273443),
           ),
@@ -113,7 +118,7 @@ class _DisplayPictureScreenState extends State<DisplayPictureScreen> {
               labelStyle: TextStyle(
                 fontWeight: FontWeight.w500,
                 color: Colors.white,
-                fontSize: 16.0.sp,
+                fontSize: 16.sp,
               ),
               labelBackgroundColor: const Color(0xff273443),
             )

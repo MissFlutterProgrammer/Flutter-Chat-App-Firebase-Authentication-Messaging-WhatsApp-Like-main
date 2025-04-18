@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-
 import '../features/chat/ui/chat_page.dart';
 import '../features/create_password/ui/create_password.dart';
 import '../features/display_picture/ui/display_picture_screen.dart';
@@ -94,7 +93,6 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (context) => const HomeScreen(),
         );
-  
     }
     return null;
   }
