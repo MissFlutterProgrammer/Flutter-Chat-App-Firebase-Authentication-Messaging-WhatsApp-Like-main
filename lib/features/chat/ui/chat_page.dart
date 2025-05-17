@@ -121,12 +121,15 @@ class _ChatScreenState extends State<ChatScreen> {
 
     if (pickedFile != null) {
       if (!mounted) return;
-      context.pushNamed(Routes.displayPictureScreen, arguments: [
-        pickedFile,
-        token!,
-        widget.receivedMToken,
-        widget.receivedUserID,
-      ]);
+      context.pushNamed(
+        Routes.displayPictureScreen,
+        arguments: [
+          pickedFile,
+          token!,
+          widget.receivedMToken,
+          widget.receivedUserID,
+        ],
+      );
     }
   }
 

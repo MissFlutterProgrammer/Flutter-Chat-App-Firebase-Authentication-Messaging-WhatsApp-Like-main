@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
 import '../../../helpers/app_regex.dart';
 import '../../../themes/styles.dart';
 import '../../helpers/extensions.dart';
@@ -95,7 +94,10 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             if (value == null ||
                 value.isEmpty ||
                 !AppRegex.isEmailValid(value)) {
-              return context.tr('pleaseEnterValid', args: ['Email']);
+              return context.tr(
+                'pleaseEnterValid',
+                args: ['Email'],
+              );
             }
           },
           controller: emailController,
